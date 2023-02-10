@@ -43,4 +43,4 @@ for `files`     --> it subracts umask number from `0666`
 for `directory` --> it subracts umask number from `0777`
 
 # TEST command in linux
-`help test`         --> 
+`help test`         --> Helps or shows the opertors, or conditional available option.
