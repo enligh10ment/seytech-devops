@@ -161,3 +161,10 @@ in your mac/windows terminal:
         - set the password user
         - ssh with that user nto ubuntu 
 
+
+
+1. Create a function that does:
+    - check if user exists
+    - if not create user, along with home directory, and shell
+    - generate ssh-key for user
+2. 
