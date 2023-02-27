@@ -105,10 +105,12 @@ git stash apply                        --> brings everything in once
 #### GIT HEAD
 cat .git/HEAD    --> HEAD is current branch, but actually it points to commit not to a branch
 
-# How to check all commits, history
+## How to check all commits, history
 git reflog      --> shows everything
 
-# Resetting, removing, repointing HEAD (current working commit) [`commit` --> version, point of changes]
+## Resetting, removing, repointing HEAD 
+Head is a current working commit [`commit` --> version, point of changes]
+```
 git reset 
 git reset --hard HEAD           --> resets the HEAD and your working directory.
 git reset --soft HEAD           --> resets the HEAD only
@@ -121,7 +123,10 @@ git revert                      --> does reset the HEAD but created new commit.
 # Git rebase
 - is method of applying your changes on top on other. Meaning, when we run
 ```
-git rebase main       --> while you are on <kanat> branch. It merges changes from main to kanat and apllies kanat's local change on top of it.
+
+## Git Rebase
+```
+git rebase main                --> while you are on <kanat> branch. It merges changes from main to kanat and apllies kanat's local change on top of it.
 
 
 git rebase main             --> rebases local
