@@ -6,43 +6,43 @@
   - digital ocean
 
 
-### How are we connecting to them:
+## How are we connecting to them:
   - uisng ssh (secure shell) key
 
-##### Default ssh port
+## Default ssh port
   - 22
 
-##### SSH works with key pairs
+## SSH works with key pairs
   - private 
   - public 
 
-###### How to generate ssh-key 
-  ```
-  ssh-keygen
-  ```
+### How to generate ssh-key 
+```
+ssh-keygen
+```
 
-###### ssh-key components
-- default location:
+### ssh-key components
+1. default location:
+```
+~/.ssh
+
+# Permission on .ssh should be below:
+chmod 700 ~/.ssh 
+
+# Permission on private key should be below:
+chmod 400 ~/.ssh/id_rsa
+
+# Authorized keys with 600 permission
+~/.ssh/authorized_keys
   ```
-  ~/.ssh
-
-  # Permission on .ssh should be below:
-  chmod 700 ~/.ssh 
-
-  # Permission on private key should be below:
-  chmod 400 ~/.ssh/id_rsa
-
-  # Authorized keys with 600 permission
-  ~/.ssh/authorized_keys
-  ```
-- Also, there is a known_hosts file. Somethimes if the hostname change and it complains, then you need to find that in known_hosts
+2. Also, there is a known_hosts file. Somethimes if the hostname change and it complains, then you need to find that in known_hosts
 and delete it.
 ```
 vim ~/.ssh/known_hosts      # inside the vim /<hostname> it is complaining
 ```
 
 
-###### Connecting two machines using ssh
+### Connecting two machines using ssh
 Let say from local machine to remote machine
 - ssh <username>@<ip>or<hostname> 
 
@@ -50,7 +50,7 @@ example:
   - My ubuntu machine name : kanat(hostname)
   - My ubuntu machine IP: 192.168.64.8
 
-##### Connecting syntax
+#### Connecting syntax
 ```
 ssh -i <path_for_key> <username>@<username>@<ip>or<hostname> 
 ```
@@ -102,13 +102,13 @@ git stash pop                          --> bring stashed changes back to git sta
 git stash apply                        --> brings everything in once
 
 
-#### GIT HEAD
+### GIT HEAD
 cat .git/HEAD    --> HEAD is current branch, but actually it points to commit not to a branch
 
-## How to check all commits, history
+### How to check all commits, history
 git reflog      --> shows everything
 
-## Resetting, removing, repointing HEAD 
+### Resetting, removing, repointing HEAD 
 Head is a current working commit [`commit` --> version, point of changes]
 ```
 git reset 
@@ -124,7 +124,7 @@ git revert                      --> does reset the HEAD but created new commit.
 - is method of applying your changes on top on other. Meaning, when we run
 ```
 
-## Git Rebase
+### Git Rebase
 ```
 git rebase main                --> while you are on <kanat> branch. It merges changes from main to kanat and apllies kanat's local change on top of it.
 
